@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 ### Inference
 
-Run inference code on our provided demo videos.
+Run inference code on our provided demo videos. \
 Make sure to change directory of pretrained model to the path you download pretrained weights in configs/prompts/video_demo.yaml file.
 
 ```bash
