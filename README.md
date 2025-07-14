@@ -1,4 +1,4 @@
-# <center> **Video Color Grading via Look-Up Table Generation** </center>
+# <p align=center> **Video Color Grading via Look-Up Table Generation** </p>
 <div align="center">
 <img src='assets/teaser.png' style="height:100px"></img>
 <br>
