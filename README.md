@@ -1,4 +1,4 @@
-<p align=center> **[ICCV 2025] Video Color Grading via Look-Up Table Generation** </p>
+<center> **[ICCV 2025] Video Color Grading via Look-Up Table Generation** </center>
 <div align="center">
 <img src='assets/teaser.png' style="height:100px"></img>
 <br>
