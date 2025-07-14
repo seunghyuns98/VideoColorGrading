@@ -16,7 +16,7 @@ Joon-Young Lee<sup>3 &dagger;</sup>,
 
 ICCV 2025
 
- <a href='https://arxiv.org/abs/2504.01016'><img src='https://img.shields.io/badge/arXiv-2504.01016-b31b1b.svg'></a> &nbsp;
+ <a href='https://arxiv.org'><img src='https://img.shields.io/badge/arXiv-2504.01016-b31b1b.svg'></a> &nbsp;
 </div>
 
 ## 📝 Introduction
