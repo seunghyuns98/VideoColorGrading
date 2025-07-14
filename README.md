@@ -3,12 +3,12 @@
 <img src='assets/teaser.png' style="height:250px"></img>
 <br>
 
-**Seunghyun Shin<sup>1</sup>, 
+Seunghyun Shin<sup>1</sup>, 
 Dongmin Shin<sup>2</sup>, 
 Jisu Shin<sup>1 </sup>, 
 Hae-Gon Jeon<sup>2 &dagger;</sup>, 
 Joon-Young Lee<sup>3 &dagger;</sup>, 
-**
+
 <br>
 <sup>1</sup>GIST
 <sup>2</sup>Yonsei University
