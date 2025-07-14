@@ -18,3 +18,24 @@ ICCV 2025
 
  <a href='https://arxiv.org/abs/2504.01016'><img src='https://img.shields.io/badge/arXiv-2504.01016-b31b1b.svg'></a> &nbsp;
 </div>
+
+## 📝 Introduction
+
+We present a reference-based video color grading framework. Our key idea is to generate a look-up table (LUT) for color attribute alignment between reference scenes and input video via a diffusion model.
+
+If you find Video Color Grading useful, **please help ⭐ this repo**, which is important to Open-Source projects. Thanks!
+
+- `[26/06/2025]` 🎉🎉🎉 Video Color Grading is accepted by ICCV 2025.
+
+
+## 🚀 Quick Start
+
+### Installation
+1. Clone this repo:
+```bash
+git clone https://github.com/seunghyuns98/VideoColorGrading.git
+```
+2. Install dependencies (please refer to [requirements.txt](requirements.txt)):
+```bash
+pip install -r requirements.txt
+```
