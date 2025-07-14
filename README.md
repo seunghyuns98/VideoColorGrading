@@ -39,3 +39,21 @@ git clone https://github.com/seunghyuns98/VideoColorGrading.git
 ```bash
 pip install -r requirements.txt
 ```
+3. Download 
+
+### Inference
+
+Run inference code on our provided demo videos.
+Make sure to change directory of pretrained model to the path you download pretrained weights in configs/prompts/video_demo.yaml file.
+
+```bash
+python video_demo.py \
+--ref_path examples/reference.png \ #PATH To Your reference images or videos
+--input_path examples/video1.mp4 \ #PATH To Your Input Video 
+--save_path output/example1.mp4 \ #PATH To Your Output Folder
+# --config configs/prompts/video_demo.yaml
+# --seed 42
+# --size 512
+# --steps 25
+```
+
