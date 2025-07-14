@@ -1,6 +1,6 @@
 # <p align=center> **Video Color Grading via Look-Up Table Generation** </p>
 <div align="center">
-<img src='assets/teaser.png' style="height:300px"></img>
+<img src='assets/teaser.png' style="height:250px"></img>
 <br>
 
 **Seunghyun Shin<sup>1</sup>, 
