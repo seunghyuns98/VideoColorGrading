@@ -1,5 +1,5 @@
-<div align="center">
 # **[ICCV 2025] Video Color Grading via Look-Up Table Generation**
+<div align="center">
 <img src='assets/teaser.png' style="height:100px"></img>
 <br>
 
