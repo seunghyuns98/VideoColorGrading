@@ -44,8 +44,8 @@ bash fast_env.sh
 ```bash
 pip install -r requirements.txt
 ```
-3. Download the pretrained model weights.
-
+3. Download the pretrained model weights at:
+[Google Drive](https://drive.google.com/drive/folders/1NpWXjQxo6ZdOVdSoCzVhCik58WMXXqqC?usp=sharing)
 
 ### Inference
 
