@@ -71,9 +71,9 @@ Training consists of two steps:
 
 Before training, make sure to update the config files with your environment:
 ```yaml
-pretrained_model_path : PATH To Your Pretrained Stable-Diffusion-Model\
-clip_model_path: PATH To Your Pretrained CLIP-Model\
-step1_checkpoint_path: PATH To Your Pretrained Step1 Model\
+pretrained_model_path : PATH To Your Pretrained Stable-Diffusion-Model
+clip_model_path: PATH To Your Pretrained CLIP-Model
+step1_checkpoint_path: PATH To Your Pretrained Step1 Model
 etc.
 ```
 You can see config files at confgis folder 
@@ -81,8 +81,8 @@ You can see config files at confgis folder
 Furthermore, change your lut path in your dataloader
 
 ### 📁 Dataset Preparation
-We use the Condensed Movie Dataset which consists of over 33,000 clips from 3,600 movies covering the salient parts of the films and has two-minutes running time for each clip in average.\ 
-& $100$ LUT bases which are selected as distinctive LUTs from the $400$ LUTs of the Video Harmonization Dataset.\
+We use the Condensed Movie Dataset which consists of over 33,000 clips from 3,600 movies covering the salient parts of the films and has two-minutes running time for each clip in average. \ 
+& $100$ LUT bases which are selected as distinctive LUTs from the $400$ LUTs of the Video Harmonization Dataset. \
 You can download them through below links:
 
 [Condensed Movie Dataset](https://www.robots.ox.ac.uk/~vgg/data/condensed-movies) \ 
