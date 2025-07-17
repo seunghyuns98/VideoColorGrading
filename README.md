@@ -36,12 +36,11 @@ If you find Video Color Grading useful, **please help ⭐ this repo**, which is 
 git clone https://github.com/seunghyuns98/VideoColorGrading.git
 ```
 2. Install dependencies (please refer to [requirements.txt](requirements.txt)):
-
-Directly Generate conda with our bash script: 
+- Directly Generate conda with our bash script: 
 ```bash
 bash fast_env.sh
 ```
-Or Install manually:
+- Or Install manually:
 ```bash
 pip install -r requirements.txt
 ```
@@ -70,13 +69,13 @@ Training consists of two steps:
 1. GS-Extractor
 2. L-Diffuser 
 
-Before train your model you should change some options with your settings which are listed in the form of config files.\
-ex)\
+Before training, make sure to update the config files with your environment:
+```yaml
 pretrained_model_path : PATH To Your Pretrained Stable-Diffusion-Model\
 clip_model_path: PATH To Your Pretrained CLIP-Model\
 step1_checkpoint_path: PATH To Your Pretrained Step1 Model\
 etc.
-
+```
 You can see config files at confgis folder 
 
 Furthermore, change your lut path in your dataloader
