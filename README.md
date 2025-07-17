@@ -82,7 +82,7 @@ Furthermore, change your lut path in your dataloader
 
 ### 📁 Dataset Preparation
 We use the Condensed Movie Dataset which consists of over 33,000 clips from 3,600 movies covering the salient parts of the films and has two-minutes running time for each clip in average. \ 
-& $100$ LUT bases which are selected as distinctive LUTs from the $400$ LUTs of the Video Harmonization Dataset. \
+$100$ LUT bases which are selected as distinctive LUTs from the $400$ LUTs of the Video Harmonization Dataset. \
 You can download them through below links:
 
 [Condensed Movie Dataset](https://www.robots.ox.ac.uk/~vgg/data/condensed-movies) \ 
