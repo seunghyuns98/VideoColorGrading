@@ -1,0 +1,26 @@
+pretrained_model_path: PATH To Your Pretrained Stable-Diffusion-Model
+pretrained_vae_path: PATH To Your Pretrained VAE-Model
+pretrained_unet_path: PATH To Your Pretrained Step2 Model
+pretrained_clip_path: PATH To Your Pretrained CLIP-Model
+pretrained_referencenet_path: PATH To Your Pretrained Step1 Model
+savename: null
+
+fusion_blocks: "full"
+
+
+seed:           [42]
+steps:          25
+
+inference_config: "configs/inference/inference.yaml"
+size: 256
+L:    16
+S:    1 
+I:    0
+clip: 0
+offset: 0
+max_length: null
+video_type: "condition"
+invert_video: false
+save_individual_videos: false
+
+
