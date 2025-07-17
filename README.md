@@ -38,7 +38,7 @@ git clone https://github.com/seunghyuns98/VideoColorGrading.git
 2. Install dependencies (please refer to [requirements.txt](requirements.txt)):
 - Directly Generate conda with our bash script: 
 ```bash
-bash fast_env.sh
+source fast_env.sh
 ```
 - Or Install manually:
 ```bash
