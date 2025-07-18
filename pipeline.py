@@ -23,7 +23,6 @@ from diffusers.utils import deprecate, logging, BaseOutput
 from einops import rearrange
 from models.ReferenceNet_attention_diff import ReferenceNetAttention
 
-
 logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
 
 
@@ -213,6 +212,8 @@ class InferencePipeline(DiffusionPipeline):
             device,
             generator,
         )
+
+
         latents_dtype = latents.dtype
         # Prepare extra step kwargs.
         extra_step_kwargs = self.prepare_extra_step_kwargs(generator, eta)
@@ -223,23 +224,22 @@ class InferencePipeline(DiffusionPipeline):
         clip_image_encoder.to(device=latents.device)
         
         cos_sim = torch.nn.CosineSimilarity()
-        max = 0
+        max_sim = 0
         source_image = np.expand_dims(source_image, axis=0)
-        for idx_c in tqdm(range(len(input_video))):
+        for idx_c in tqdm(range(0, len(input_video), 24)):
             clip_src_image = clip_image_processor(images=Image.fromarray(input_video[idx_c]).convert('RGB'), return_tensors="pt").pixel_values
             clip_src_vector = clip_image_encoder(clip_src_image.to(device=latents.device,dtype=latents.dtype)).unsqueeze(1).to(device=latents.device,dtype=latents.dtype)
             clip_ref_image = clip_image_processor(images=Image.fromarray(source_image[0]).convert('RGB'), return_tensors="pt").pixel_values
             clip_ref_vector = clip_image_encoder(clip_ref_image.to(device=latents.device,dtype=latents.dtype)).unsqueeze(1).to(device=latents.device,dtype=latents.dtype)
             sim_val = cos_sim(clip_ref_vector.squeeze(1), clip_src_vector.squeeze(1))
-            if sim_val > max:
-                max = sim_val
+            if sim_val > max_sim:
+                max_sim = sim_val
                 src_img = input_video[idx_c]
                 clip_src = clip_src_vector
                 ref_img = source_image[0]
                 clip_ref = clip_ref_vector
         src_image_latents = self.images2latents(src_img[None, :], latents_dtype).cuda()
         ref_image_latents = self.images2latents(ref_img[None, :], latents_dtype).cuda()
-        print(src_image_latents.shape, ref_image_latents.shape)
         encoder_hidden_states = torch.cat([clip_ref, clip_src], dim=0) # [bs,1,768]
 
         clip_image_encoder.to('cpu')
@@ -247,9 +247,7 @@ class InferencePipeline(DiffusionPipeline):
         
         batch_size = 1
         
-        
         ref_input = torch.cat([ref_image_latents, src_image_latents], dim=0)
-
         for i, t in tqdm(enumerate(timesteps), total=len(timesteps), disable=(rank!=0)):
             if num_actual_inference_steps is not None and i < num_inference_steps - num_actual_inference_steps:
                 continue
@@ -285,7 +283,6 @@ class InferencePipeline(DiffusionPipeline):
             if is_dist_initialized:
                 dist.broadcast(latents, 0)
                 dist.barrier()
-
         if is_dist_initialized:
             dist.barrier()
 
