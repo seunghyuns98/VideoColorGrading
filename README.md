@@ -52,13 +52,9 @@ Make sure to update the path to the pretrained model in configs/prompts/video_de
 
 ```bash
 python video_demo.py \
---ref_path examples/reference.png \ #PATH To Your reference images or videos
+--ref_path examples/reference.jpg \ #PATH To Your reference images or videos
 --input_path examples/video1.mp4 \ #PATH To Your Input Video 
 --save_path output/example1.mp4 \ #PATH To Your Output Folder
-# --config configs/prompts/video_demo.yaml
-# --seed 42
-# --size 512
-# --steps 25
 ```
 
 ## 🏋️‍♂️ Train Your Own Model
