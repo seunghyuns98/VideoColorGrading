@@ -52,9 +52,9 @@ Make sure to update the path to the pretrained model in configs/prompts/video_de
 
 ```bash
 python video_demo.py \
---ref_path examples/reference.jpg \ #PATH To Your reference images or videos
---input_path examples/video1.mp4 \ #PATH To Your Input Video 
---save_path output/example1.mp4 \ #PATH To Your Output Folder
+--ref_path examples/reference.jpg \
+--input_path examples/video1.mp4 \ 
+--save_path output/example1.mp4 \ 
 ```
 
 ## 🏋️‍♂️ Train Your Own Model
