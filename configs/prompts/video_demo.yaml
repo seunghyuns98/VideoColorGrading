@@ -1,8 +1,8 @@
-pretrained_model_path: PATH To Your Pretrained Stable-Diffusion-Model
-pretrained_vae_path: PATH To Your Pretrained VAE-Model
-pretrained_unet_path: PATH To Your Pretrained Step2 Model
-pretrained_clip_path: PATH To Your Pretrained CLIP-Model
-pretrained_referencenet_path: PATH To Your Pretrained Step1 Model
+pretrained_sd_path: "pretrained_models/stable-diffusion-v1-5"
+pretrained_clip_path: "pretrained_models/clip-vit-base-patch32"
+pretrained_GE_path: "pretrained_models/GS-Extractor.ckpt"
+pretrained_LD_path: "pretrained_models/L-Diffuser.ckpt"
+
 savename: null
 
 fusion_blocks: "full"

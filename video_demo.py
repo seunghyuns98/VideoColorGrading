@@ -5,26 +5,28 @@ import argparse
 
 def animate_images(args):
     animator = Inference(config=args.config)
-    data_root = args.data_root
-    ref_root = args.ref_root
+    ref_path = args.ref_path
+    input_path = args.input_path
+    save_path = args.save_path
+
    
-    reference_image = Image.open(ref_root).convert('RGB').resize((args.size, args.size))
+    reference_image = Image.open(ref_path).convert('RGB').resize((args.size, args.size))
     reference_image = np.array(reference_image)
 
-    motion_sequence = data_root
     seed = args.seed
     steps = args.steps
     size = args.size
 
-    animation_path = animator(reference_image, motion_sequence, seed, steps, ref_root, size)
+    animation_path = animator(reference_image, input_path, save_path, seed, steps, size)
     print(f"Result saved at {animation_path}")
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Animate images using given parameters.")
+    parser.add_argument('--ref_path', type=str, required=True, help='Path to the reference images or videos.')
+    parser.add_argument('--input_path', type=str, required=True, help='Path to the input sequence file.')
+    parser.add_argument('--save_path', type=str, required=True, help='Path to save output sequence file.')
     parser.add_argument('--config', type=str, default='configs/prompts/video_demo.yaml', help='Path to the configuration file.')
-    parser.add_argument('--ref_root', type=str, required=False, help='Path to the reference image.')
-    parser.add_argument('--data_root', type=str, required=False, help='Path to the motion sequence file.')
-    parser.add_argument('--seed', type=int, help='Seed value.', default=-1)
+    parser.add_argument('--seed', type=int, help='Seed value.', default=26)
     parser.add_argument('--steps', type=int, help='Number of steps for the animation.', default=25)
     parser.add_argument('--size', type=int, help='Size of the image.', default=512)
 

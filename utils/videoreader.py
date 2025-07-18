@@ -1,19 +1,3 @@
-# *************************************************************************
-# This file may have been modified by Bytedance Inc. (“Bytedance Inc.'s Mo-
-# difications”). All Bytedance Inc.'s Modifications are Copyright (2023) B-
-# ytedance Inc..  
-# *************************************************************************
-
-# Copyright 2022 ByteDance and/or its affiliates.
-#
-# Copyright (2022) PV3D Authors
-#
-# ByteDance, its affiliates and licensors retain all intellectual
-# property and proprietary rights in and to this material, related
-# documentation and any modifications thereto. Any use, reproduction,
-# disclosure or distribution of this material and related documentation
-# without an express license agreement from ByteDance or
-# its affiliates is strictly prohibited.
 import av, gc
 import torch
 import warnings
@@ -29,11 +13,7 @@ av.logging.set_level(av.logging.ERROR)
 
 
 class VideoReader():
-    """
-    Simple wrapper around PyAV that exposes a few useful functions for
-    dealing with video reading. PyAV is a pythonic binding for the ffmpeg libraries.
-    Acknowledgement: Codes are borrowed from Bruno Korbar
-    """
+    
     def __init__(self, video, num_frames=float("inf"), decode_lossy=False, audio_resample_rate=None, bi_frame=False):
         """
         Arguments:
