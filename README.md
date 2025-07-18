@@ -42,12 +42,12 @@ source fast_env.sh
 ```
 - Or Install manually(please refer to [fast_env.sh](fast_env.sh))
 
-3. Download the pretrained model weights from [Google Drive](https://drive.google.com/drive/folders/1NpWXjQxo6ZdOVdSoCzVhCik58WMXXqqC?usp=sharing) and place them in the [pretrained/](pretrained/) directory.
+3. Download the pretrained model weights from [Google Drive](https://drive.google.com/drive/folders/1NpWXjQxo6ZdOVdSoCzVhCik58WMXXqqC?usp=sharing) and place them in the 'pretrained/' directory.
 
 ### Inference
 
-Run inference code on our provided demo videos. \
-Make sure to update the path to the pretrained model in configs/prompts/video_demo.yaml
+Run inference code using the provided example reference image and input video. \
+If you placed pretrained models in a directory other than 'pretrained/', make sure to update its path in configs/prompts/video_demo.yaml.
 
 ```bash
 python video_demo.py \
@@ -59,8 +59,8 @@ python video_demo.py \
 ## 🏋️‍♂️ Train Your Own Model
 
 Training consists of two steps:
-1. GS-Extractor
-2. L-Diffuser 
+1. Training GS-Extractor
+2. Training L-Diffuser 
 
 Before training, make sure to update the config files with your environment:
 ```yaml
