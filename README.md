@@ -35,15 +35,13 @@ If you find Video Color Grading useful, **please help ⭐ this repo**, which is 
 ```bash
 git clone https://github.com/seunghyuns98/VideoColorGrading.git
 ```
-2. Install dependencies (please refer to [requirements.txt](requirements.txt)):
+2. Install dependencies:
 - Directly Generate conda with our bash script: 
 ```bash
 source fast_env.sh
 ```
-- Or Install manually:
-```bash
-pip install -r requirements.txt
-```
+- Or Install manually(please refer to [fast_env.sh](fast_env.sh))
+
 3. Download the pretrained model weights at:
 [Google Drive](https://drive.google.com/drive/folders/1NpWXjQxo6ZdOVdSoCzVhCik58WMXXqqC?usp=sharing)
 
