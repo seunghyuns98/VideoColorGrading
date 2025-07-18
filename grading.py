@@ -113,12 +113,5 @@ class Inference():
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
         save_videos_grid(output_video, save_path)
-            
-        input_video = input_video/255.0
-        input_video = rearrange(input_video, "t h w c -> 1 c t h w")
-        input_video = torch.from_numpy(input_video)
-
-        save_videos_grid(input_video, "./examples/video1.mp4")
-
         
         return save_path
