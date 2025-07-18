@@ -42,8 +42,7 @@ source fast_env.sh
 ```
 - Or Install manually(please refer to [fast_env.sh](fast_env.sh))
 
-3. Download the pretrained model weights at:
-[Google Drive](https://drive.google.com/drive/folders/1NpWXjQxo6ZdOVdSoCzVhCik58WMXXqqC?usp=sharing)
+3. Download the pretrained model weights from [Google Drive](https://drive.google.com/drive/folders/1NpWXjQxo6ZdOVdSoCzVhCik58WMXXqqC?usp=sharing) and place them in the [pretrained/](pretrained/) directory.
 
 ### Inference
 
@@ -53,8 +52,8 @@ Make sure to update the path to the pretrained model in configs/prompts/video_de
 ```bash
 python video_demo.py \
 --ref_path examples/reference.jpg \
---input_path examples/video1.mp4 \ 
---save_path output/example1.mp4 \ 
+--input_path examples/video1.mp4 \
+--save_path output/example1.mp4 
 ```
 
 ## 🏋️‍♂️ Train Your Own Model
