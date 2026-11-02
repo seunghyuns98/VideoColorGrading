@@ -1024,7 +1024,7 @@ class ReferenceNet(ModelMixin, ConfigMixin, UNet2DConditionLoadersMixin):
         
         if not os.path.isfile(model_file):
             raise RuntimeError(f"{model_file} does not exist")
-        state_dict = torch.load(model_file, map_location="cpu")["referencenet_state_dict"]
+        state_dict = torch.load(model_file, map_location="cpu", weights_only=True)["referencenet_state_dict"]
 
         m, u = model.load_state_dict(state_dict, strict=False)
         print(f"### missing keys: {len(m)}; \n### unexpected keys: {len(u)};")

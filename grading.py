@@ -38,14 +38,14 @@ class Inference():
         self.clip_image_processor = CLIPProcessor.from_pretrained(config.pretrained_clip_path, local_files_only=True)
 
         unet = UNet2DConditionModel.from_pretrained(config.pretrained_sd_path, subfolder="unet", in_channels=6, out_channels=3, low_cpu_mem_usage=False, ignore_mismatched_sizes=True)
-        state_dict = torch.load(config.pretrained_LD_path, map_location="cpu")['unet_state_dict']
+        state_dict = torch.load(config.pretrained_LD_path, map_location="cpu", weights_only=True)['unet_state_dict']
         m, u = unet.load_state_dict(state_dict, strict=True)
         print(f"### missing keys: {len(m)}; \n### unexpected keys: {len(u)} ###")
         if len(m) !=0 or len(u) !=0:
             print(f"### missing keys:\n{m}\n### unexpected keys:\n{u}\n ###")
         
         self.referencenet = ReferenceNet.from_pretrained(config.pretrained_sd_path, subfolder="unet")
-        state_dict = torch.load(config.pretrained_GE_path, map_location="cpu")["referencenet_state_dict"]
+        state_dict = torch.load(config.pretrained_GE_path, map_location="cpu", weights_only=True)["referencenet_state_dict"]
         m, u = self.referencenet.load_state_dict(state_dict, strict=True)
         print(f"### missing keys: {len(m)}; \n### unexpected keys: {len(u)} ###")
         if len(m) !=0 or len(u) !=0:
